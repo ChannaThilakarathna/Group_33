@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hospital Group</title>
+   <meta name="viewport content="width=devie-width, initial-scale="1.0">
+  <meta content="text/html" charset="iso-88592-2" http-equiv="Content-type">
+ 
+  <link rel="stylesheet" type="text/css" href="style1.css">
+  <style>
+
+  </style>
+  
+</head>
+<body>
+  <nav>
+    <label class="logo">CW-Hospital</label>
+    <ul>
+      <li><a class="active" href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+  <h1 align="center">
+    <div class="container2">
+      <span class="text1">Welcome To CW</span>
+    </div>
+  </h1>
+ 
+  <div class="gp-content-gp-section" style="max-width:1300px">
+  <img class="gpslides" src="images/hs1.jpg" height="800px" width="1200px">
+  <img class="gpslides" src="images/100.jfif" height="800px" width="1200px">
+  <img class="gpslides" src="images/hs4.jpg" height="800px" width="1200px">
+</div>
+<br/>
+<marquee style="font-size:45px;color:black;">Enjoy Your Life To The Fullest!</marquee>
+<h2 style ="color:blue;text-align:center;font-size:50px;font-style:bold"><u>CW Hospital PLC</u></h2>
+<p style="margin:35px;color:purple;font-size:35px;">CW Hospitals PLC is a public quoted, BOI approved Private Hospital located in Ratnapura. The Hospital consists of services such as Channeling, Emergency services, Laboratory, Radiology (CT, X-Ray, Ultrasound), Pharmacy, In-Ward services from economy to VIP Suites, Surgical services with top of the range Modular Operating Theaters, ICU, in house Cafe and has ample parking space as well. CW Hospital is also one of the leading Laboratory Service providers in the country, with 12 Laboratories and over 30 sample collection centers located island wide.</p>
+
+<h2 style=" margin: 30px;background-color:green;color:orange;text-align:left;font-size:45px;font-style:bold">What we offer at CW</h2>
+<p style="margin: 30px; color:maroon;text-align:left;font-size: 30px">CW, roughly translated, means ‘a blessing’ – and that is exactly what we strive to be to each and every patient who enters our doors. We are your total healthcare provider – and that means you can reach out to us when you are ill or hurt, but also when you want to live life to the fullest and be your healthiest self.
+
+We are a leading brand in private healthcare in Sri Lanka. Our people are some of the most dedicated, skilled and experienced healthcare providers and medical experts in the country. They are adept at using many of the most cutting-edge medical equipment and technology in the industry. We also follow the most stringent international standards in all our processes to ensure a safe and healthy environment for everyone.</p>
+<footer>
+  <h1>Contact Details<h1>
+  <ul>
+    <li>Telephone:0766771148</li>
+    <li>Email:cwhospital@gmail.com</li>
+    <li>Address: No.95, Nagahawatta Road,Rathnapura</li>
+  </footer>
+
+
+  <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("gpslides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
+  
+</body>
+</html>
