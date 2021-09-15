@@ -16,9 +16,13 @@ $email=$_POST["email"];
 
 $con= mysqli_connect($host,$user,$pass,$db);
 mysqli_select_db($con,"login_account");
+
 $sql ="INSERT INTO users VALUES('$username','$password','$address','$gender','$email')";
 $ret= mysqli_query($con,$sql);
+
 mysqli_close($con);
+
+
 if (mysqli_num_rows($result)==1)
 {
 	echo("Welcome! <a href='home.html'></a>");
