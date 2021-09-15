@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<title>Create</title>
+		<script language="javascript" type="text/javascript">
+		function validateform()
+		{
+			if(document.form1.username.value.length==0)
+			{
+				window.alert("Please enter a username!");
+				return;
+			}
+			if(document.form1.password.value.length==0)
+			{
+				window.alert("Please enter a password!");
+				return;
+			}
+			if(document.form1.address.value.length==0)
+			{
+				alert("Address field should not be empty!");
+				return;
+			}
+			if ((document.form1.method[0].checked) && (!document.form1.method[1].checked))
+			{
+				alert("Please select your gender");
+				return;
+			}
+			window.alert("Welcome You Have become a new member");
+		}
+		
+	</script>
+<style>
+.textbox
+	  {
+	    border-radius:30px;
+	    font-family:Arial;
+		color:#4285F4;
+        font-size:16px;	
+        width:280px;
+        height:30px;		
+	  }
+
+</style>
+</head>
+<body>
+	<form name="form1" method="POST" action="RegisterForm.php">
+
+	<table border="2" height="500px" width="100%" >
+	   
+	  		<!--ROW0-->
+		<tr bgcolor="yellow">
+			<th colspan="2"><font color="black" size="45px">Join with Us today</th>
+		</tr>
+		 <tr bgcolor="black">
+			<th><font color="yellow">First Name:</th>
+			<th><input type="text" name="FirstName" class="textbox"></th>
+		</tr>
+		<tr bgcolor="black">
+			<th><font color="yellow">Last Name</th>
+			<th><input type="text" name="LastName" class="textbox"></th>
+		</tr>  
+		 
+		<!--ROW1-->
+		<tr bgcolor="black">
+			<th><font color="yellow">Username :</th>
+			<th><input type="text" name="username" class="textbox"></th>
+		</tr>
+		<!--ROW2-->
+		<tr bgcolor="black">
+			<th><font color="yellow">Password: </th>
+			<th><input type="text" name="password" class="textbox"></th>
+		</tr>
+		<!--ROW3-->
+		<tr bgcolor="black">
+			<th><font color="yellow">Address</th>
+			<th><input type="text" name="address" class="textbox"></th>
+		</tr>
+
+		<!--ROW4-->
+		<tr bgcolor="black">
+			<th><font color="yellow">Gender</th>
+			<th><input type="radio" name="Gender"><font color="yellow">Male <input type="radio" name="Gender"><font color="yellow" name="Gender">Female</th>
+		</tr>
+		<!--ROW5-->
+		<tr bgcolor="black">
+			<th><font color="yellow">Email-Address</th>
+			<th><input type="text" name="email" class="textbox"></th>
+		</tr>
+		<!--ROW6-->
+		<tr>
+			<th colspan="2" bgcolor="yellow">
+				<input type="submit" value="Send" onclick="validateform();swel('your account is successfully created!');">
+				<input type="reset" value="Cancel">
+	</table>
+	<script src="sweetalert.min.js"></script>
+</body>
+</html>
