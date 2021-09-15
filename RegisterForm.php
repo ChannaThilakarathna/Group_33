@@ -1,16 +1,9 @@
 <?php
 
 $sever="localhost";
-$username="rooot";
+$username="root";
 $pw="";
 
-$FirstName=$_POST["FirstName"];
-$LastName=$_POST["LastName"];
-$username=$_POST["username"];
-$password=$_POST["password"];
-$address=$_POST["address"];
-$gender=$_POST["Gender"];
-$email=$_POST["email"];
 
 //connection
 
@@ -24,6 +17,19 @@ else
 {
 	echo"Error!connection failed";	
 }
+
+$FirstName=$_POST["FirstName"];
+$LastName=$_POST["LastName"];
+$username=$_POST["username"];
+$password=$_POST["password"];
+$address=$_POST["address"];
+$gender=$_POST["Gender"];
+$email=$_POST["email"];
+
+
+
+
+
 $usedb="USE cwhospital";
 mysqli_query($con,$usedb);
 
@@ -32,9 +38,11 @@ $sql ="INSERT INTO patient_register VALUES('$FirstName','$LastName','$username',
 
 
 
-if(mysql_query($con,$sql))
+if(mysqli_query($con,$sql))
 {
-	echo"Succefully!data inserted";
+	echo("Welcome! <a href='login.html'></a>");
+	header("location:login.html");
+	exit;//page close
 }
 else
 {
